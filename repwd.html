@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>重置密码</title>
+    <script src="./js/$set-host-url.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .box {
+            width: 400px;
+            height: auto;
+            margin: 10vh auto;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 1vh;
+            margin-top: 1vh;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+
+        /* 非法的请求 */
+        .container_1 {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+            display: none;
+        }
+
+        .title_1 {
+            color: #ff0000;
+        }
+
+        .message_1 {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1 class="title">重置密码</h1>
+        <div class="form">
+            <label for="password">新密码：</label>
+            <input type="text" name="password" placeholder="请输入新密码（无各类限制）" id="password">
+            <br>
+            <label for="two_password">确认密码：</label>
+            <input type="text" name="two_password" placeholder="确认密码" id="two_password">
+            <button id="reset" onclick="start()">确认</button>
+        </div>
+    </div>
+    <div class="container_1">
+        <h1 class="title_1">非法请求</h1>
+        <p class="message_1">对不起，您的请求不被允许。</p>
+        <p>联系作者解决----<a href="https://lihuarong.cn:8080/" target="_blank">lihuarong.cn</a></p>
+    </div>
+</body>
+<script>
+    var url = "";
+    var username = "";
+    var key = "";
+    window.onload = function () {
+        url = new URL(window.location.href);
+        username = url.searchParams.get("username");
+        mail = url.searchParams.get("mail");
+        number = url.searchParams.get("number");
+        key = url.searchParams.get("key");
+        //如果有任意一个为空
+        if (username === null || key === null) {
+            console.log("非法的请求");
+            document.querySelector(".container_1").style.display = "block";
+            document.querySelector(".box").style.display = "none";
+        }
+    }
+
+    function check() {
+        if (document.getElementById("password").value === "") {
+            alert("密码不能为空");
+            return false;
+        }
+        if (document.getElementById("password").value !== document.getElementById("two_password").value) {
+            alert("两次输入的密码不一致");
+            return false;
+        }
+        return true;
+    }
+
+    function start() {
+        const url_server = "https://lihuarong.cn:8080/"
+        if (check()) {
+            var pwd1 = document.getElementById("password").value;
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", url_server + `mail/update_pwd.php?username=${username}&password=${pwd1}&key=${key}`);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var result = JSON.parse(xhr.responseText);
+                    if (result.code == "200") {
+                        var url = result.data;
+                        //弹出确认框(类似alert)
+                        if (confirm("重写密码成功！是否立即跳转登录？")) {
+                            window.location.href = url;
+                        }
+                        set_time();
+                    } else if (result.code == "401") {
+                        alert(result.msg);
+                        window.location.href = result.data;
+                    } else if (result.code == "404") {
+                        alert(result.msg);
+                        window.location.href = result.data;
+                    } else {
+                        alert("未知的严重问题，错误:403");
+                        window.location.href = "./gpwd.html";
+                    }
+                }
+            };
+        }
+    }
+</script>
+
+</html>

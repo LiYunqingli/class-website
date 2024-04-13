@@ -1,0 +1,140 @@
+body {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 175vh;
+  height: 85vh;
+  background-color: white;
+  border-radius: 2vh;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 10vh;
+  margin-top: 5vh;
+}
+
+.user_img {
+  padding-left: 4vh;
+}
+
+.user_img img {
+  position: relative;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border: 0.1vh solid rgba(0, 0, 0, 0.03);
+
+  transition: transform 1s;
+}
+
+.rotate {
+  transform: rotate(360deg);
+  /* 图片旋转一圈，可根据需要调整旋转角度 */
+}
+
+/* 
+  table tr td{
+    border: 1px solid #000;
+  } */
+
+table {
+  margin-left: 10vh;
+  margin-top: 15vh;
+}
+
+.row1 {
+  height: 20vh;
+}
+
+.row2 {
+  height: 30vh;
+  top: 0;
+}
+
+.row2 td {
+  flex-direction: column;
+}
+
+.index_right {
+  padding-left: 15vh;
+  /* margin-right: 20vh; */
+}
+
+.care {
+  width: 100%;
+  height: 25vh;
+  border-radius: 2vh;
+  border: 0.3vh solid rgba(0, 0, 0, 0.3);
+  /* box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.1); */
+  margin-top: 5vh;
+  text-align: center;
+}
+
+.index_right_main {
+  width: 80vh;
+  height: 50vh;
+  /* border: 0.3vh solid rgba(0, 0, 0, 0.3); */
+  border-radius: 2vh;
+}
+
+.index_right_main img {
+  width: 2vh;
+  margin-left: 3vh;
+  margin-right: 3vh;
+}
+
+.lise {
+  width: 90%;
+  height: 9vh;
+  margin: 0 auto;
+  border-radius: 1.5vh;
+  border: 0.1vh solid rgba(0, 0, 0, 0.3);
+  margin-top: 3vh;
+  line-height: 10vh;
+  font-size: 2vh;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.lise:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* 灰色图层 */
+.overlay_1 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* 半透明黑色 */
+  z-index: 9999;
+  /* 设置z-index使其位于最上层 */
+}
+
+/* 弹窗 */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 80vh;
+  height: 40vh;
+  transform: translate(-65%, -50%);
+  /* 将弹窗居中 */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  /* 设置z-index使其位于灰色图层之上 */
+}
+
+.popup h1 {
+  font-size: 3vh;
+  text-align: center;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/loading.css">
+  <!-- 设置主机地址 -->
+  <script src="../js/$set-host-url.js"></script>
+</head>
+
+<body>
+  <div class="loader" id="loader"></div>
+  <div id="overlay" class="overlay"></div>
+  <table width="100%">
+    <tr class="row1">
+      <td style="width: 45%">
+        <div class="first">
+          <h1>首页</h1>
+          <p id="tit_p">Hi, xxx, 别来无恙啊！</p>
+        </div>
+      </td>
+      <td>
+        <div class="first_right">
+          <p style="text-align: center; line-height: 2.2vh; margin-top: 2vh" id="tip">
+
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr class="row2">
+      <td>
+        <div class="index_left"></div>
+      </td>
+      <td rowspan="2">
+        <div class="index_right">
+          <img src="../img/a4.jpg" alt="" width="100%" />
+          <p style="
+                font-size: 2vh;
+                font-weight: bold;
+                margin: 0;
+                text-align: center;
+              ">
+            同学们课间的样子
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr class="row3">
+      <td>
+        <h3></h3>
+        <p class="after_p">
+          “一名优秀的程序员，在穿越单行道时也会确认双向的来车情况。”——道格拉斯·林德（Doug
+          Linder）
+          <br />
+          <br />
+          “诶，为什么这个功能在测试环境运行正常，到了生产环境就出问题了？”--云清璃（Yunqingli
+          YQL）
+        </p>
+      </td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+<script>
+  // 设定网站开始运行的日期时间
+  const startDate = new Date("2023-08-25T00:00:00Z");
+
+  function updateCountdown() {
+    const currentDate = new Date();
+    const timeDiff = currentDate.getTime() - startDate.getTime();
+
+    const seconds = Math.floor(timeDiff / 1000);
+    const minutes = Math.floor(seconds / 60);
+    const hours = Math.floor(minutes / 60);
+    const days = Math.floor(hours / 24);
+
+    const remainingSeconds = seconds % 60;
+    const remainingMinutes = minutes % 60;
+    const remainingHours = hours % 24;
+    var text = "共上传743次代码到主分支<br>代码行数：31739<br><a href='https://yunqingli.lanzoul.com/iIbCO1oxlulg'>源码下载</a>";
+    document.getElementById('tip').innerHTML = `<br>本站已经运行了 ${days} 天 ${remainingHours} 小时 ${remainingMinutes} 分钟 ${remainingSeconds} 秒<br><br>${text}`;
+    // console.log(`本站已经运行了 ${days} 天 ${remainingHours} 小时 ${remainingMinutes} 分钟 ${remainingSeconds} 秒`);
+  }
+
+  // 每秒更新一次倒计时
+  setInterval(updateCountdown, 1000);
+</script>
+<script src="../js/loading.js"></script>
+<script src="../js/main.js"></script>
+
+</html>

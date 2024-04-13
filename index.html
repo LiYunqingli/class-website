@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/loading.css" />
+  <script src="./js/script.js"></script>
+  <!-- 设置主机地址 -->
+  <script src="./js/$set-host-url.js"></script>
+</head>
+
+<body>
+  <!-- 加载动画 -->
+  <div class="loader" id="loader"></div>
+  <div id="overlay" class="overlay"></div>
+
+  <div class="left" onmouseout="collapseLeft()" onmouseover="expandLeft()">
+    <div class="head">
+      <img id="user_img" src="#" alt="" />
+      <div id="name" class="title">xx</div>
+    </div>
+
+    <div class="icon_div">
+      <div class="icon" onclick="start('首页')">
+        <img src="./img/首页.png" alt="" />
+        <br />
+        <p>首页</p>
+        <div class="jingru">
+          <img src="./img/进入箭头.png" alt="" />
+        </div>
+      </div>
+      <div class="icon" onclick="start('德育分')">
+        <img src="./img/德育分.png" alt="" />
+        <br />
+        <p>德育分</p>
+        <div class="jingru">
+          <img src="./img/进入箭头.png" alt="" />
+        </div>
+      </div>
+      <div class="icon" onclick="start('共享')">
+        <img src="./img/共享.png" alt="" />
+        <br />
+        <p>共享</p>
+        <div class="jingru">
+          <img src="./img/进入箭头.png" alt="" />
+        </div>
+      </div>
+      <div class="icon" onclick="start('文件')">
+        <img src="./img/文件.png" alt="" />
+        <br />
+        <p>文件</p>
+        <div class="jingru">
+          <img src="./img/进入箭头.png" alt="" />
+        </div>
+      </div>
+      <div class="icon" onclick="start('账户')">
+        <img src="./img/224用户.png" alt="" />
+        <br />
+        <p>账户</p>
+        <div class="jingru">
+          <img src="./img/进入箭头.png" alt="" />
+        </div>
+      </div>
+      <div class="icon" onclick="start('关于')">
+        <img src="./img/关于.png" alt="" />
+        <br />
+        <p>关于</p>
+        <div class="jingru">
+          <img src="./img/进入箭头.png" alt="" />
+        </div>
+      </div>
+      <div class="icon" onclick="start('music')">
+        <img src="./img/关于.png" alt="" />
+        <br />
+        <p>音乐</p>
+        <div class="jingru">
+          <img src="./img/进入箭头.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <iframe id="main" src="./html/main.html" frameborder="0" width="100%" height="100%"></iframe>
+    <iframe id="music" src="./html/music/index.html" frameborder="0" style="width: calc(100vw - 10vh)" height="100%"
+      style="display: none"></iframe>
+  </div>
+  <div class="xt" id="xt">
+    <div class="option">查看账户</div>
+    <div class="option" onclick="查看内侧()">查看内侧</div>
+    <div class="option" onclick="close_xt()">关闭</div>
+  </div>
+</body>
+<script src="./js/loading.js"></script>
+<script src="./js/script_after.js"></script>
+<script>
+  document
+    .getElementById("user_img")
+    .addEventListener("contextmenu", function (event) {
+      event.preventDefault();
+      var xt = document.getElementById("xt");
+      xt.style.display = "block";
+      xt.style.top = event.pageY + "px";
+      xt.style.left = event.pageX + "px";
+    });
+
+  function 查看内侧() {
+    document.getElementById("main").src = "./html/qj.html";
+    close_xt();
+  }
+
+  function close_xt() {
+    document.getElementById("xt").style.display = "none";
+  }
+</script>
+
+</html>

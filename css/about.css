@@ -1,0 +1,113 @@
+body {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.box {
+  margin-top: 5vh;
+  margin-left: 17vh;
+}
+
+.care {
+  width: 150vh;
+  height: 13vh;
+  border-radius: 2vh;
+  background-color: white;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.1);
+  line-height: 13vh;
+}
+
+.care h1 {
+  font-size: 3vh;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 400;
+  text-align: center;
+}
+
+.care h1:hover {
+  font-weight: bold;
+}
+
+.hr {
+  margin-top: 1.5vh;
+  width: 150vh;
+  height: 1vh;
+  background-color: white;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 1vh;
+}
+
+.main {
+  width: 150vh;
+  height: 50vh;
+  background-color: #fff;
+  border-radius: 2vh;
+  margin-top: 5vh;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main .img {
+  width: 24vh;
+  height: 24vh;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.1);
+  border: 0.1vh solid rgba(0, 0, 0, 0.1);
+  margin-top: 14vh;
+  margin-left: 11vh;
+
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.img:hover {
+  transform: scale(1.1);
+  /* 悬停时放大 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* 悬停时添加阴影效果 */
+}
+
+.user {
+  display: flex;
+}
+
+.user_name {
+  position: relative;
+  margin-top: 20vh;
+  margin-left: 7vh;
+}
+
+.line_hr {
+  /* 竖线 */
+  position: relative;
+  width: 1vh;
+  background-color: #b6b6b6d5;
+  border-radius: 1vh;
+  margin-top: 14vh;
+  margin-left: 10vh;
+}
+
+.tree {
+  width: 70vh;
+  height: 20vh;
+  border: 0.1vh solid rgba(0, 0, 0, 0.5);
+  border-radius: 2vh;
+  padding: 2vh;
+  margin-left: 5vh;
+  margin-top: 13vh;
+  display: flex;
+}
+
+.tree_son_div {
+  width: 70vh;
+  height: 22vh;
+  transition: all 1s ease;
+}
+
+.hiddent {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.user_h1 {
+  font-size: 2vh;
+}

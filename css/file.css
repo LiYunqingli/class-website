@@ -1,0 +1,367 @@
+body {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.box {
+  width: 160vh;
+  height: 90vh;
+  background-color: #fff;
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 2vh;
+  margin-left: 5vh;
+  margin-top: 5vh;
+}
+
+.line1 {
+  height: 20vh;
+}
+
+.row1 {
+  width: 50vh;
+}
+
+.row2 {
+  width: 110vh;
+}
+
+.line2 .row2 {
+  position: relative;
+}
+
+.line2 {
+  height: 70vh;
+}
+
+.h {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  border: 0.1vh solid #000;
+  border-radius: 1vh;
+  text-align: center;
+  padding: 3vh;
+  font-size: 2vh;
+}
+
+.h img {
+  width: 30%;
+}
+
+ul li {
+  width: 90%;
+  height: 10vh;
+  border: 0.1vh solid #000;
+  transition: all 0.3s ease;
+  list-style: none;
+  border-radius: 1vh;
+  padding: 1vh;
+  margin: 2vh;
+}
+
+ul li:hover {
+  transform: scale(1.02);
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.1);
+}
+
+table tr td {
+  border: 1px solid #000;
+}
+
+#list {
+  height: 59vh;
+  width: 90%;
+  overflow: auto;
+  border: 0.1vh solid #000;
+  margin: 0 auto;
+  border-radius: 1vh;
+  user-select: none;
+}
+
+#list ul {
+  margin-top: 5vh;
+}
+
+#list ul li {
+  display: flex;
+  align-items: center;
+}
+
+.style {
+  width: 5vh;
+  font-size: 5vh;
+  line-height: 10vh;
+  margin-left: 2vh;
+  border-radius: 1vh;
+  cursor: pointer;
+}
+
+.list_name {
+  line-height: 2.5vh;
+  font-size: 2vh;
+  width: 15vh;
+  height: 2.5vh;
+  overflow: hidden;
+  cursor: pointer;
+  margin-left: 3vh;
+  margin-right: 3vh;
+}
+
+.list_name:hover {
+  font-weight: bold;
+}
+
+.time {
+  margin-left: 3vh;
+  cursor: pointer;
+}
+
+.size {
+  cursor: pointer;
+}
+
+.url {
+  width: 90vh;
+  height: 5vh;
+  border: 0.1vh solid #000;
+  margin-bottom: 1vh;
+  display: flex;
+  background-color: rgba(239, 239, 239, 0.666);
+  align-items: center;
+  overflow-x: auto
+}
+
+.back {
+  width: 5%;
+  height: 5vh;
+  border: 0.1vh solid #000;
+  text-align: center;
+  line-height: 5vh;
+  margin-right: 1vh;
+  margin-left: 5vh;
+  cursor: pointer;
+}
+
+.reset {
+  width: 5%;
+  height: 5vh;
+  border: 0.1vh solid #000;
+  text-align: center;
+  line-height: 5vh;
+  margin-right: 1vh;
+  margin-left: 1vh;
+  cursor: pointer;
+}
+
+.url div {
+  min-width: 10vh;
+  background-color: rgb(255, 255, 255);
+  margin-right: 1vh;
+  margin-left: 1vh;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.6vh;
+
+}
+
+.url div:hover,
+.back:hover,
+.reset:hover {
+  background-color: #5f5f5f;
+  color: #fff;
+}
+
+
+.loader1 {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin1 2s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+}
+
+@keyframes spin1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 2vh;
+}
+
+#qp {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  z-index: 10000;
+}
+
+/* 隐藏自定义菜单 */
+#custom-menu {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  width: 200px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  padding: 0; /* 移除默认的内边距 */
+  margin: 0; /* 移除默认的外边距 */
+}
+
+#custom-menu li {
+  padding: 10px 15px;
+  cursor: pointer;
+  list-style-type: none; /* 移除列表项的标记 */
+  transition: background-color 0.25s ease;
+  margin: 0; /* 移除列表项的外边距 */
+  border: none;
+  height: auto;
+  width: auto;
+}
+
+#custom-menu li:hover {
+  background-color: #f7f7f7;
+}
+
+/* 颜色条 */
+#custom-menu li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.add{
+  width: 40vh;
+  height: 10vh;
+  border: 0.1vh solid #000;
+  border-radius: 2vh;
+  margin-left: 5vh;
+  text-align: center;
+  line-height: 5vh;
+  padding: 1vh;
+  cursor: pointer;
+}
+
+.add:hover{
+  background-color: #5f5f5f;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 0 1vh #000;
+}
+
+.create{
+  width: 12vh;
+  height: 10vh;
+  border: 0.1vh solid #000;
+  border-radius: 2vh;
+  margin-left: 5vh;
+  text-align: center;
+  line-height: 10vh;
+  padding: 1vh;
+  cursor: pointer;
+}
+
+.create:hover{
+  background-color: #5f5f5f;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 0 1vh #000;
+}
+
+
+
+.container_share {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  left: 40vw;
+  top: 40vh;
+  z-index: 19999;
+}
+
+.form_share {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.form-input_share {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-submit_share {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-submit_share:hover {
+  background-color: #45a049;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.form_share {
+  animation: fadeIn 0.5s both;
+}
+
+/* 新增以下 CSS 代码 */
+.form-radio_share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-radio_share label {
+  margin: 5px;
+}

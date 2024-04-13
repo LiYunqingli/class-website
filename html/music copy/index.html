@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="./css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- 音乐播放器 -->
+    <div class="player-warp">
+      <!-- 歌曲信息卡片 -->
+      <div class="player-info">
+        <div class="info">
+          <div class="name">xxx</div>
+          <div class="singer-album">xx - xxxxx</div>
+          <!-- 进度条 -->
+          <div class="music_progress">
+            <div class="music_progress_top">
+              <span class="current-time">00:00</span>
+              <span class="time">00:00</span>
+            </div>
+            <div class="music_progress_bar">
+              <div class="music_progress_line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 音乐控制器 -->
+      <div class="player-control">
+        <!-- 封面唱片 -->
+        <div class="cover">
+          <img
+            src="https://p2.music.126.net/wztA5smxFjIfv98u7-IrQQ==/109951168933355255.jpg"
+            alt="封面"
+          />
+        </div>
+        <!-- 控制按钮 -->
+        <div class="control">
+          <i id="prevBtn" class="fa fa-step-backward"></i>
+          <i id="playBtn" class="fa fa-play"></i>
+          <i id="nextBtn" class="fa fa-step-forward"></i>
+          <i id="openModal" class="fa fa-reorder"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- 页面背景 -->
+    <div class="mask_bg"></div>
+
+    <!-- 模态框 -->
+    <div class="modal">
+      <div class="modal-box">
+        <div class="modal-box-top">
+          <div class="modal-title">音乐列表</div>
+          <div class="modal-close">
+            <i class="fa fa-remove"></i>
+          </div>
+        </div>
+        <div class="modal-wrapper">
+          <ul class="music-list">
+            <!-- <li>
+              <span>01. 我记得 - 赵雷</span>
+              <span class="fa fa-play-circle play-circle"></span>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <audio src=""></audio>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

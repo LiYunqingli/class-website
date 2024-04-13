@@ -1,0 +1,119 @@
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: #fafafa;
+  position: relative;
+  top: 0;
+  transform: translateX(10vh);
+  transition: transform 0.3s ease;
+}
+
+.left {
+  width: 10vh;
+  height: 100vh;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  border-radius: 0 1vh 1vh 0;
+  background-color: #2d32a8;
+  transition: width 0.3s ease;
+}
+
+.head {
+  position: fixed;
+  width: 7vh;
+  border-radius: 1vh;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+  margin-top: 3vh;
+  margin-left: 1.5vh;
+}
+
+.head img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 1vh;
+  transition: transform 0.3s ease;
+}
+
+.head .title {
+  color: white;
+  display: none;
+  position: fixed;
+  width: 7vh;
+  border-radius: 1vh;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+  margin-top: 3vh;
+  margin-left: 10vh;
+  font-size: 2vh;
+}
+
+.icon_div {
+  margin-top: 20vh;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.icon {
+  margin-top: 5vh;
+  position: relative;
+}
+
+.icon img {
+  position: relative;
+  width: 3.5vh;
+  margin: 0 auto;
+  aspect-ratio: 1/1;
+}
+
+.jingru img {
+  top: 1vh;
+  left: 16vh;
+  width: 3vh;
+  position: absolute;
+  display: none;
+}
+
+.icon p {
+  color: white;
+  margin-top: 0px;
+  font-size: 1.8vh;
+  text-align: center;
+}
+
+.xt{
+  width: 20vh;
+  height: 30vh;
+  border: 0.1px solid #000;
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  background-color: #00000049;
+  border-radius: 0.5vh;
+  display: none;
+}
+
+.xt .option{
+  width: 98%;
+  height: 5vh;
+  line-height: 5vh;
+  text-align: center;
+  color:#fff;
+  user-select: none;
+  border: 0.1vh solid #000;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+
+.xt .option:hover{
+  background-color: #00000089;
+  font-weight: bold;
+  box-shadow: 0 0 10px #fff;
+}

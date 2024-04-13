@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>音乐播放器</title>
+  <link rel="stylesheet" href="./css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+<style>
+  .box1 {
+    margin: 0 auto;
+    width: 40vw;
+    height: 60vh;
+    background-color: #fff;
+    box-shadow: 0 0 10px #000;
+    border-radius: 2vh;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    overflow: auto;
+    position: absolute;
+  }
+
+  .box1 input[type="text"],
+  .box1 input[type="file"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    height: auto;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  .box1 input[type="text"]:focus,
+  .box1 input[type="file"]:focus {
+    border-color: #007bff;
+  }
+
+  .box1 .ok {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .box1 .ok:hover {
+    background-color: #0056b3;
+  }
+
+  .box1 label {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+</style>
+
+<body>
+  <!-- 音乐播放器 -->
+  <div class="player-warp">
+    <!-- 歌曲信息卡片 -->
+    <div class="player-info">
+      <div class="info">
+        <div class="name">xxx</div>
+        <div class="singer-album">xx - xxxxx</div>
+        <!-- 进度条 -->
+        <div class="music_progress">
+          <div class="music_progress_top">
+            <span class="current-time">00:00</span>
+            <span class="time">00:00</span>
+          </div>
+          <div class="music_progress_bar">
+            <div class="music_progress_line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 音乐控制器 -->
+    <div class="player-control">
+      <!-- 封面唱片 -->
+      <div class="cover">
+        <img src="https://p2.music.126.net/wztA5smxFjIfv98u7-IrQQ==/109951168933355255.jpg" alt="封面" />
+      </div>
+      <!-- 控制按钮 -->
+      <div class="control">
+        <i id="prevBtn" class="fa fa-step-backward"></i>
+        <i id="playBtn" class="fa fa-play"></i>
+        <i id="nextBtn" class="fa fa-step-forward"></i>
+        <i id="openModal" class="fa fa-reorder"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- 页面背景 -->
+  <div class="mask_bg"></div>
+
+  <!-- 模态框 -->
+  <div class="modal">
+    <div class="modal-box">
+      <div class="modal-box-top">
+        <div class="modal-title">音乐列表</div>
+        <button onclick="document.getElementById('box1').style.display='flex'">上传</button>
+        <div class="modal-close">
+          <i class="fa fa-remove"></i>
+        </div>
+      </div>
+      <div class="modal-wrapper">
+        <ul class="music-list">
+          <!-- <li>
+              <span>01. 我记得 - 赵雷</span>
+              <span class="fa fa-play-circle play-circle"></span>
+            </li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <audio src=""></audio>
+
+  <div class="box1" id="box1">
+    <p>这里的样式是ai写的，反正没人会用这个功能</p>
+    <label for="name">歌曲名：</label>
+    <input type="text" id="name" placeholder="歌曲的名字，不得为空">
+    <br>
+    <label for="u-name">歌手：</label>
+    <input type="text" id="u-name" placeholder="演唱这首歌的歌手或演奏这首歌的音乐师，可以为空">
+    <br>
+    <label for="song-book">专辑：</label>
+    <input type="text" id="song-book" placeholder="专辑，如果没有可以空着">
+    <br>
+    <label for="song-file">上传歌曲文件：</label>
+    <input type="file" id="song-file" accept=".mp3,audio/mpeg">
+    <br>
+    <label for="photo">上传封面(可以为空，为空则使用默认封面)：</label>
+    <input type="file" id="photo" accept="image/jpeg,image/png">
+    <br>
+    <br>
+    <button class="ok">提交</button>
+    <button class="ok" onclick="document.getElementById('box1').style.display='none'">关闭</button>
+  </div>
+
+
+  <script src="./js/jquery.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

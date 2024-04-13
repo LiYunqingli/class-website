@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/loading.css">
+  </head>
+  <body>
+    <div class="loader" id="loader"></div>
+    <div id="overlay" class="overlay"></div>
+
+    <div class="box">
+      <div class="care">
+        <h1 onclick="local_start()">关于作者</h1>
+      </div>
+      <div class="hr"></div>
+      <div class="main">
+        <div class="user">
+          <!-- <img src="../img/logo.png" alt="" class="img" /> -->
+          <img src="https://q4.qlogo.cn/g?b=qq&nk=168278282&s=140" alt="" class="img" />
+          <div class="user_name" style="line-height: 2vh">
+            <p>
+              <span style="font-weight: bold; font-size: 2vh">云清璃</span>
+              <br />
+              <span style="font-size: 1.5vh">Yunqingli(YQL)</span>
+              <br />
+              <span style="font-size: 2vh">软件与信息服务</span>
+            </p>
+          </div>
+          <div class="line_hr"></div>
+          <div class="tree">
+            <div id="tree_1" class="tree_son_div" style="display: block">
+              <p class="user_h1">2023年5月自己一人开始写项目Yunqingli Dox</p>
+              <p>
+                项目使用C#程序设计语言，是我计算机生涯的第一个项目，核心代码（不算模块）累计共3461行代码，约81067个字符。总共耗时三个月零九天。
+              </p>
+              <a
+                href="https://lihuarong.cn:8080/dox/Dox%20Developer.html"
+                target="_blank"
+                >转到项目页</a
+              >
+            </div>
+            <div id="tree_2" class="tree_son_div" style="display: none">
+              <p class="user_h1">2023年8月独自开发项目德育分查询</p>
+              <p>
+                项目使用
+                HTML+CSS+JavaScript+PHP+MySQL等编程语言编写，是一个多语言的结合实例。它实现简单的德育分查询。<span
+                  style="font-weight: bold"
+                  >2023年12月进行二次升级</span
+                >，实现高级功能，与项目三（班级app）充分雷同，只不过是网页版的。
+              </p>
+              <a
+                href="https://lihuarong.cn:8080/select/home/home.html"
+                target="_blank"
+                >转到项目页</a
+              >
+            </div>
+            <div id="tree_3" class="tree_son_div" style="display: none">
+              <p class="user_h1">2023年11月与陈俊琳共同开发班级app</p>
+              <p>
+                项目前端（陈俊琳）主要使用js的mui编写用户交互界面，使用Ajax与后端（李华荣）进行数据请求，后端服务器返回处理好的json数据包。总共用时约三个星期。版本保留在1.0，暂时停止更新。
+              </p>
+              <a href="#" onclick="alert('无项目地址')" target="_blank"
+                >转到项目页</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../js/loading.js"></script>
+  <script src="../js/about.js"></script>
+</html>

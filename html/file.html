@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/file.css" />
+  <link rel="stylesheet" href="../css/loading.css" />
+  <link rel="stylesheet" href="../css/yuansu.css">
+  <!-- 设置主机地址 -->
+  <script src="../js/$set-host-url.js"></script>
+</head>
+
+<body ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+  <ul id="custom-menu">
+    <li onclick="right_start()">打开 | Start</li>
+    <li onclick="right_shear()">剪切 | Shear</li>
+    <li onclick="right_copy()">复制 | Copy</li>
+    <li onclick="right_paste()">粘贴 | Paste</li>
+    <li onclick="right_share()">共享 | Share</li>
+    <li onclick="right_rename()">重命名 | Rename</li>
+    <li onclick="right_delete()">删除 | Delete</li>
+  </ul>
+  <div class="loader" id="loader"></div>
+  <div id="overlay" class="overlay"></div>
+  <div class="container_share" id="share_window">
+    <div class="form_share">
+      <label for="password_share">密码（4位数字）：</label>
+      <input class="form-input_share" type="tetx" id="password_share" name="password_share" pattern="[0-9]{4}"
+        required placeholder="若不填写则无密码"><br><br>
+      <!-- <label for="details">共享描述</label> -->
+      <div class="form-radio_share">
+        <label>选择有效期：</label><br>
+        <input class="form-input_share" type="radio" id="oneday_share" name="validity_share" value="1">
+        <label for="oneday_share">一天</label>
+
+        <input class="form-input_share" type="radio" id="threedays_share" name="validity_share" value="3">
+        <label for="threedays_share">三天</label>
+
+        <input class="form-input_share" type="radio" id="sevendays_share" name="validity_share" value="7">
+        <label for="sevendays_share">七天</label>
+
+        <input class="form-input_share" type="radio" id="permanent_share" name="validity_share" value="*" checked>
+        <label for="permanent_share">永久</label>
+      </div>
+
+      <input class="form-submit_share" type="button" value="提交" onclick="share_ok()">
+      <input class="form-submit_share" type="button" value="关闭" onclick="close_share_window()">
+    </div>
+  </div>
+  <div class="box">
+    <table>
+      <tr class="line1">
+        <td class="row1">
+          <div class="h">
+            <img src="../img/kyg.png" alt="" />
+            <br />
+            意为所有课程资料都归于云端，方便整理和清洁。
+          </div>
+        </td>
+        <td class="row2">
+          <div style="display: flex;">
+            <div class="add" id="drop-area" onclick="start_qp('请拖动一个文件在盒子上方上传，请注意，一次只能上传一个文件，且不支持文件夹，此处bug比较多，还未完善')">
+              拖放文件到任意位置（除侧边栏外）将自动<span style="color: red;font-weight: bold;">上传</span>(支持多文件，不支持文件夹)
+            </div>
+            <div class="create" onclick="create_dir()">
+              新建文件夹
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr class="line2">
+        <td class="row1" style="text-align: center;padding: 1vh;">
+          <h2>公告</h2>
+          <h4 style="color: red;font-weight: bold;">
+            为维护网络生态环境，本站点郑重提醒：未经授权，禁止上传或传播任何违法、淫秽、暴力或侵犯他人权益的内容，一经发现，立即删除并保留追究法律责任的权利。剥夺使用课云归的使用权
+          </h4>
+          <h4>本模块可当轻量级云盘使用，也可当虚拟主机使用（略有不同，毕竟自己开发的平台），
+            为避免服务器过载或流量超支，限制每个用户html页面存储200MB，带宽峰值3M/s</h4>
+
+          <a href="#" id="user_url_a" target="_blank">跳转您的主页</a>
+          <p id="user_url"></p>
+          <p style="font-weight: bold;color: rgba(255, 0, 0, 0.425);">必须在root目录下存在index.html文件！！！！否则无法正常跳转到代理网站</p>
+          <br>
+          <br>
+          <div class="care">
+            <div class="checkbox-wrapper-41">
+              <input type="checkbox" id="start_btn" onchange="y_n()" />
+              <br />
+              启用网页代理？
+            </div>
+          </div>
+        </td>
+        <td class="row2">
+          <div class="loader1" id="loader1"></div>
+          <div id="overlay1" class="overlay1"></div>
+          <div style="display: flex; user-select: none">
+            <div class="back" onclick="goBack()">←</div>
+            <div class="url" id="url">
+              <!-- list -->
+            </div>
+            <div class="reset" onclick="refreshFileList()">🔃</div>
+          </div>
+          <div id="list" class="content-area">
+            <!-- list -->
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- 气泡消息 -->
+  <div id="qp">消息</div>
+</body>
+<script src="../js/loading.js"></script>
+<script src="../js/file.js"></script>
+
+</html>

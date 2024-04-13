@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/deyufen-admin.css">
+    <link rel="stylesheet" href="../css/loading.css">
+    <script src="../js/loading.js"></script>
+    <!-- 设置主机地址 -->
+    <script src="../js/$set-host-url.js"></script>
+</head>
+
+<body>
+    <div class="loader" id="loader"></div>
+    <div id="overlay" class="overlay"></div>
+    <button class="a_z" onclick="paixu()">
+        按照成绩排序
+    </button>
+    <br>
+    <div class="left">
+    </div>
+    <div class="right">
+        <!-- 用户德育分数据 -->
+        <p style="text-align: center;">点击 <span style="font-weight: bold;">左侧</span> 查看用户德育分列表</p>
+    </div>
+    <div class="insert">
+        <button onclick="amns()">批量插入数据</button>
+        <form id="insertForm">
+            <label for="username" id="label_for_username">学号：</label>
+            <select name="username" id="username">
+                <!-- <option value="2210909">2210909</option>
+            <option value="2210909">2210910</option>
+            <option value="2210911">2210911</option>
+            <option value="2210911">2210912</option> -->
+            </select>
+            <div id="checkbox_for_username" style="display: none;user-select: none;">
+                <input name="ed_username" type="radio" id="all" value="all">全班
+                <input name="ed_username" type="radio" id="bgb" value="bgb">班干部
+                <input name="ed_username" type="radio" id="_3602" value="3602">3602
+                <input name="ed_username" type="radio" id="_3603" value="3603">3603
+                <input name="ed_username" type="radio" id="_3604" value="3604">3604
+                <input name="ed_username" type="radio" id="_3702" value="3702">3702
+            </div>
+            <br>
+            <label for="score">分数：</label>
+            <input type="text" id="score" name="score" placeholder="填写阿拉伯数字，加分可以不写+号">
+            <br>
+            <label for="style">类型：</label>
+            <select name="style" id="style">
+                <option value="纪律">纪律</option>
+                <option value="考勤">考勤</option>
+                <option value="手机管理">手机管理</option>
+                <option value="劳动">劳动</option>
+                <option value="参加活动">参加活动</option>
+                <option value="文明宿舍">文明宿舍</option>
+                <option value="好人好事">好人好事</option>
+                <option value="仪容仪表">仪容仪表</option>
+                <option value="班主任指定">班主任指定</option>
+            </select>
+            <br>
+            <label for="detail">详情：</label>
+            <input type="text" id="detail" name="detail" placeholder="这里填写这条数据是干啥的，例如：上课讲话">
+            <br>
+            <label for="date">日期(啥时候发生的，点击右侧按钮可以选择日期)：</label>
+            <input type="date" name="date" id="date">
+            <br>
+            <div class="button" onclick="tijiao()">完成</div>
+            <div class="button_no" onclick="stop_insert()">
+                关闭
+            </div>
+        </form>
+    </div>
+</body>
+<script src="../js/deyufen-admin.js"></script>
+</html>

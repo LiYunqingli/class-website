@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/deyufen.css" />
+  <link rel="stylesheet" href="../css/loading.css">
+  <script src="../js/chart.js"></script>
+  <!-- 设置主机地址 -->
+  <script src="../js/$set-host-url.js"></script>
+</head>
+
+<body>
+  <div class="loader" id="loader"></div>
+  <div id="overlay" class="overlay"></div>
+  <table width="100%">
+    <tr class="row1">
+      <td style="width: 35%">
+        <div class="first">
+          <h1>德育分</h1>
+          <p id="tit_p">Hi, XXX, 你对你的分数满意吗！</p>
+        </div>
+      </td>
+      <td rowspan="4">
+        <div class="index_right">
+          <table class="right_table">
+            <tr class="right_table_row1">
+              <td colspan="2">
+                <div class="right_table_row1_div" id="deyufen_list">
+                  <!-- 德育分列表 -->
+                </div>
+              </td>
+            </tr>
+            <tr class="right_table_row2">
+              <td id="sousuo">
+                <div class="right_table_row2_left_div" onmouseover="showInput()" onmouseout="hideInput()">
+                  <span id="text">搜索</span>
+                  <input type="text" id="input" class="right_table_row2_input" placeholder="搜索：按学号，姓名，职务" />
+                </div>
+              </td>
+              <td id="quanban">
+                <div class="right_table_row2_right_div" onclick="search('')">
+                  全班
+                </div>
+              </td>
+              <td id="return" style="display: none" onclick="_return()">
+                <div style="
+                      width: 100%;
+                      height: 7vh;
+                      text-align: center;
+                      line-height: 7vh;
+                      font-weight: bold;
+                      text-decoration: underline;
+                      cursor: pointer;
+                    ">
+                  返回
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+    </tr>
+    <tr class="row2">
+      <td>
+        <div class="index_left">
+          <div style="display: flex" class="index_left_two">
+            <div>
+              <p class="index_left_p1">总分</p>
+              <p class="index_left_p2" id="total_score">null</p>
+            </div>
+            <div>
+              <p class="index_left_p1">条数</p>
+              <p class="index_left_p2" id="count_score">null</p>
+            </div>
+            <div>
+              <p id="smile"></p>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td></td>
+    </tr>
+    <tr class="row3">
+      <td rowspan="2">
+        <div class="after_left">
+          <canvas id="myChart"></canvas>
+          <div class="tip_p">
+            <p>
+              哎，如果你问我我的代码为啥跑不了，我只能回答一句，她在我的电脑可以运行。--YQL
+            </p>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <td class="row4"></td>
+  </table>
+</body>
+<script src="../js/loading.js"></script>
+<script src="../js/deyufen.js"></script>
+
+</html>

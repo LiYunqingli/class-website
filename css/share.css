@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.main {
+    width: 80vh;
+    min-width: 80vh;
+    height: 90vh;
+    margin-left: 8vh;
+    margin-top: 5vh;
+    border-radius: 2vh;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main div h2 {
+    margin: 2vh;
+    margin-left: 4vh;
+    font-size: 2vh;
+}
+
+
+.right,
+.left {
+    padding: 4vh;
+}
+
+
+
+/* 大厅 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.file-share {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.file-share .file-info {
+    flex-grow: 1;
+}
+
+.file-share .file-info h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.file-share .file-info p {
+    margin: 0;
+    font-size: 11px;
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #999;
+}
+
+.file-share .download-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-right: 5px;
+}
+
+.file-share .cancel-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-right: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.file-share .download-btn:hover,
+.file-share .cancel-btn:hover {
+    background-color: #0056b3;
+}
+
+.file-share:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.file-share .downloads {
+    font-size: 14px;
+    color: #888;
+    margin: 20px;
+}
+
+#qp {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 10000;
+}
+
+.file_icon {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}

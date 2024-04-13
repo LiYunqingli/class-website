@@ -1,0 +1,257 @@
+.first {
+  padding-left: 5vh;
+}
+
+.first h1 {
+  font-size: 4vh;
+}
+
+.first p {
+  font-size: 2vh;
+  font-weight: 600;
+}
+
+table {
+  margin: 5% 0 0 10%;
+  padding: 10px;
+  padding-top: 5vh;
+  padding-left: 10vh;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/*
+.row1 td {
+  padding-bottom: 5vh;
+} */
+
+.index_left {
+  text-align: center;
+  width: 40vh;
+  height: 13vh;
+  border: 0.1vh solid rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 2vh;
+}
+
+.index_left_two {
+  margin: 2vh 0 0 1vh;
+}
+
+.index_left_two div {
+  width: 8vh;
+  height: 8vh;
+  margin-left: 3vh;
+}
+
+.index_left_p1 {
+  font-size: 2.25vh;
+  font-family: "黑体";
+  line-height: 1vh;
+  font-weight: 600;
+}
+
+.index_left_p2 {
+  font-size: 2vh;
+  font-weight: bold;
+}
+
+.index_right {
+  width: 40vh;
+  height: 74vh;
+  border-radius: 1.25vh;
+  border: 0.1vh solid rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  margin-left: 4vh;
+}
+
+.after_left {
+  width: 40vh;
+  height: 30vh;
+  border-radius: 2vh;
+  margin-top: 5vh;
+  border: 0.1vh solid rgba(0, 0, 0, 0.2);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  overflow: hidden;
+  padding: 1vh;
+}
+
+.tip_p {
+  padding: 1vh;
+  margin-top: 2vh;
+  font-size: 1.5vh;
+}
+
+#smile {
+  font-size: 5vh;
+  margin: 0px;
+  margin-top: 1vh;
+}
+
+.right_table {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border-radius: 3vh;
+}
+
+.right_table_row1 {
+  height: 64vh;
+}
+
+.right_table_row1_div {
+  height: 64vh;
+  border-bottom: 0.1vh solid #000;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 设置鼠标悬停（德育分列表） */
+.right_table_row1_div:hover {
+  overflow-y: auto;
+}
+
+.right_table_row1_div:hover::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f5f5f5;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.right_table_row1_div:hover::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+/* 结束 */
+
+.right_table_row2 {
+  height: 7vh;
+  margin-top: 0;
+  font-size: 2vh;
+}
+
+.right_table_row2_left_div {
+  border-right: 0.1vh solid #000;
+  cursor: pointer;
+}
+
+.right_table_row2_input {
+  display: none;
+  font-size: 2vh;
+  width: 80%;
+  border-radius: 0.5vh;
+  margin: 1vh;
+  padding: 2vh;
+}
+
+.score_tip {
+  width: 35vh;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 1vh;
+  margin-top: 2vh;
+  padding: 1vh;
+  line-height: 2vh;
+  transition: all 0.3s ease-in-out;
+}
+
+.score_tip:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.score_tip p {
+  margin-top: 0.5vh;
+}
+
+.score_tip .no {
+  text-align: left;
+  font-size: 2vh;
+}
+
+.score_tip .score {
+  font-size: 3vh;
+  font-weight: bold;
+  padding-left: 2vh;
+  margin-top: 1.4vh;
+  float: left;
+}
+
+.score_tip .details {
+  padding-left: 2vh;
+  line-height: 2.2vh;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /* 最大显示行数 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.9vh;
+}
+
+.score_tip .date {
+  text-align: right;
+  padding-top: 0.1vh;
+  font-size: 1.9vh;
+  line-height: 3vh;
+}
+
+.right_table_row2_right_div {
+  cursor: pointer;
+}
+
+.right_table_row2_right_div:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.search {
+  display: flex;
+  height: 12vh;
+}
+
+.search_img_div {
+  position: relative;
+  width: 9vh;
+  margin-top: 1.5vh;
+  margin-left: 1vh;
+}
+
+.search_img {
+  border-radius: 2vh;
+  width: 100%;
+}
+
+.search_name_username {
+  display: block;
+  text-align: left;
+  height: 9vh;
+  margin-top: 3vh;
+  line-height: 3.5vh;
+  padding-left: 1vh;
+}
+
+.search_name {
+  font-size: 2vh;
+}
+
+.search_username {
+  font-size: 1.5vh;
+}
+
+.search_score {
+  font-size: 3vh;
+  font-weight: bold;
+  position: relative;
+  margin-left: 4vh;
+  margin-top: 4.5vh;
+}

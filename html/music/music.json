@@ -1,0 +1,82 @@
+[
+  {
+    "name": "《诀别书》",
+    "audio_url": "./audios/诀别书.mp3",
+    "singer": "邓垚",
+    "album": "unknown",
+    "cover": "https://p2.music.126.net/wztA5smxFjIfv98u7-IrQQ==/109951168933355255.jpg",
+    "time": "04:02"
+  },
+  {
+    "name": "Catch My Breath",
+    "audio_url": "./audios/Catch My Breath.mp3",
+    "singer": "Kelly Clarkson",
+    "album": "unknown",
+    "cover": "https://p2.music.126.net/oioz4AI79t_8hd6njGrWqA==/109951167302849274.jpg",
+    "time": "04:04"
+  },
+  {
+    "name": "Indestructible",
+    "audio_url": "./audios/Indestructible.mp3",
+    "singer": "Fazzi / Donna Tella",
+    "album": "unknown",
+    "cover": "https://p2.music.126.net/UGiqyd0mMSLh36SyPEL9gQ==/109951169038032511.jpg",
+    "time": "03:59"
+  },
+  {
+    "name": "I Really Want to Stay at Your House",
+    "audio_url": "./audios/I Really Want to Stay at Your House.mp3",
+    "singer": "Lorien",
+    "album": "unknown",
+    "cover": "https://p1.music.126.net/-LHyMtXmo-yDf-eqwb8ThA==/109951168143056350.jpg",
+    "time": "04:07"
+  },
+  {
+    "name": "Heaven",
+    "audio_url": "./audios/Heaven.mp3",
+    "singer": "Ailee",
+    "album": "unknown",
+    "cover": "https://p1.music.126.net/9xm9S9vNZsOsZFkerc66sQ==/109951168711780818.jpg",
+    "time": "03:31"
+  },
+  {
+    "name": "4:55",
+    "audio_url": "./audios/455.mp3",
+    "singer": "CREAM",
+    "album": "unknown",
+    "cover": "https://p1.music.126.net/9YDuztrA7z_R_DMe3JluZw==/109951163555290306.jpg",
+    "time": "03:17"
+  },
+  {
+    "name": "Merry Christmas Mr.Lawrence",
+    "audio_url": "./audios/Merry Christmas Mr.Lawrence.mp3",
+    "singer": "坂本龍一",
+    "album": "unknown",
+    "cover": "https://p2.music.126.net/PywoXPKK3AjseU0Wx9wdXw==/109951167267731534.jpg",
+    "time": "04:51"
+  },
+  {
+    "name": "Last Minute",
+    "audio_url": "./audios/Last Minute.mp3",
+    "singer": "Trinix",
+    "album": "unknown",
+    "cover": "https://p2.music.126.net/E78ESNKnNnBY4P4Txmchfw==/109951165984037473.jpg",
+    "time": "03:26"
+  },
+  {
+    "name": "ダンスホール",
+    "audio_url": "./audios/ダンスホール.mp3",
+    "singer": "Mrs. GREEN APPLE",
+    "album": "unknown",
+    "cover": "https://p1.music.126.net/Uo26iA2cUucTS0CHcL7myA==/109951167468591950.jpg",
+    "time": "03:20"
+  },
+  {
+    "name": "《Cupid (Speed up)》",
+    "audio_url": "./audios/《Cupid (Speed up)》.mp3",
+    "singer": "xdemkw",
+    "album": "unknown",
+    "cover": "https://p2.music.126.net/LRfFoTabr0DTolmBxzy48Q==/109951168910228688.jpg",
+    "time": "02:24"
+  }
+]

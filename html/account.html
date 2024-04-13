@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/account.css" />
+  <link rel="stylesheet" href="../css/yuansu.css" />
+  <link rel="stylesheet" href="../css/loading.css">
+  <!-- 设置主机地址 -->
+  <script src="../js/$set-host-url.js"></script>
+</head>
+
+<body>
+  <div class="loader" id="loader"></div>
+  <div id="overlay" class="overlay"></div>
+  <div class="main">
+    <table class="table">
+      <tr class="row1">
+        <td class="user_img" style="width: 20vh; height: 20vh">
+          <img src="../img/头像.png" alt="" style="width: 100%" id="userimg" />
+        </td>
+        <td style="padding-left: 5vh; width: 30vh; height: 20vh">
+          <p style="font-size: 3vh">名字：<span id="user_name"></span></p>
+          <p style="font-size: 2vh">账号：<span id="username"></span></p>
+        </td>
+        <td class="index_right" rowspan="2">
+          <div class="index_right_main">
+            <div class="lise" onclick="start_div('update_pwd')">
+              <img src="../img/修改密码.png" />修改密码
+            </div>
+            <div class="lise" onclick="start_div('delete_pwd')">
+              <img src="../img/重置密码.png" />重置密码
+            </div>
+            <div class="lise" onclick="start_div('problem')">
+              <img src="../img/问题反馈.png" />问题反馈
+            </div>
+            <div class="lise" onclick="start_div('about')">
+              <img src="../img/关于_1.png" />关于项目
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr class="row2">
+        <td colspan="2">
+          <div class="care">
+            <div class="checkbox-wrapper-41">
+              <input type="checkbox" />
+              <br />
+              无用的开关
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- 弹窗黑色div -->
+  <div class="overlay_1"></div>
+
+  <div class="popup" id="update_pwd">
+    <h1>修改密码</h1>
+    <form>
+      <div class="input-container">
+        <input placeholder="请输入旧密码" class="input-field" type="text" id="update_pwd_old_pwd" />
+        <label for="input-field" class="input-label">旧密码</label>
+        <span class="input-highlight"></span>
+      </div>
+      <div class="input-container">
+        <input placeholder="请输入新密码" class="input-field" type="text" id="update_pwd_new_pwd" />
+        <label for="input-field" class="input-label">新密码</label>
+        <span class="input-highlight"></span>
+      </div>
+      <div class="input-container">
+        <input placeholder="再次输入新密码" class="input-field" type="text" id="update_pwd_two_pwd" />
+        <label for="input-field" class="input-label">重复新密码</label>
+        <span class="input-highlight"></span>
+      </div>
+      <div style="margin-top: 6vh"></div>
+      <div class="btn" style="margin-left: 25vh; cursor: pointer" onclick="post('update_pwd')">
+        提交
+      </div>
+      <div class="btn close" style="margin-left: 10vh; cursor: pointer">
+        取消
+      </div>
+    </form>
+  </div>
+
+  <div class="popup" id="delete_pwd">
+    <h1>重置密码</h1>
+    <div class="btn" style="cursor: pointer;" onclick="alert('功能开发中')">确认重置</div>
+    <div class="close btn" style="cursor: pointer;">关闭</div>
+  </div>
+
+  <div class="popup" id="problem">
+    <h1>问题反馈</h1>
+    <p>功能有待实现</p>
+    <div class="close btn" style="cursor: pointer;">关闭</div>
+  </div>
+
+  <div class="popup" id="about">
+    <h1>关于项目</h1>
+    <p>点击灰色背景以外的地方即可关闭弹窗。</p>
+    <div class="close btn">关闭</div>
+  </div>
+</body>
+<script src="../js/loading-account.js"></script>
+<script src="../js/account.js"></script>
+
+</html>
