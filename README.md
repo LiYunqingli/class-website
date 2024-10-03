@@ -29,3 +29,6 @@
 ## 开发者
 李华荣(YQL) 2024
 谢谢您的支持和关注！希望我们的班级网站能为您带来更好的学习和交流体验。
+
+## 项目地址
+class-website  https://lihuarong.cn:8080/class_app/website/login.html
