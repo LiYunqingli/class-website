@@ -1,9 +1,7 @@
-# Untitled Diagram documentation
-## Summary
+# 关于本项目的数据库
+## 目录
 
-- [Introduction](#introduction)
-- [Database Type](#database-type)
-- [Table Structure](#table-structure)
+- [表结构](#table-structure)
 	- [admins](#admins)
 	- [classes](#classes)
 	- [lists](#lists)
@@ -14,9 +12,6 @@
 - [Relationships](#relationships)
 - [Database Diagram](#database-Diagram)
 
-## Introduction
-
-## Database type
 
 - **Database system:** MySQL
 ## Table structure
